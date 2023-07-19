@@ -2,12 +2,14 @@ package com.example.exception_handling.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
 @Getter
 @AllArgsConstructor
 public enum ErrorCode {
     BAD_REQUEST(HttpStatus.BAD_REQUEST,"잘못된 요청입니다."),
+    PARAM_NOT_FOUND(HttpStatus.NOT_FOUND,"파라미터 확인"),
     POSTS_NOT_FOUND(HttpStatus.NOT_FOUND,"404 NOT FOUND"),
     METHOD_NOT_ALLOWED(HttpStatus.METHOD_NOT_ALLOWED,"허용되지 않은 메서드입니다."),
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR,"서버 오류 입니다."),

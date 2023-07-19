@@ -1,17 +1,17 @@
 package com.example.exception_handling.controller;
 
-import com.example.exception_handling.dto.ErrorCode;
-import com.example.exception_handling.exception.RestApiException;
 
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ExceptionController {
 
     @GetMapping(value = "/api/br")
-    public String exceptionServer() throws Exception {
-        throw new RestApiException(ErrorCode.POSTS_NOT_FOUND);
-//        return "200";
+    public String exceptionServer(@RequestParam(value = "str", required = false) String str) throws Exception {
+        int a = 3 / 0;
+        return str;
     }
 }

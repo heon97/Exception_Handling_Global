@@ -1,8 +1,6 @@
-package com.example.programmers.dto;
+package com.example.exception_handling.dto;
 
-import com.example.exception_handling.dto.ErrorCode;
 import lombok.Getter;
-
 import java.time.LocalDateTime;
 
 @Getter
